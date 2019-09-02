@@ -1,0 +1,16 @@
+<h1><%= @hero.secret_identity %></h1>
+
+<p>
+  <ul>
+    <li>Name: <%= @hero.name %></li>
+    <li>Publisher: <%= @hero.publisher %></li>
+    <li>Super Power: <%= @hero.superpower %></li>
+  </ul>
+</p>
+
+<div class="">
+  <%= image_tag @hero.image if @hero.image.present? %>
+</div>
+
+<%= link_to "Edit", edit_hero_path(@hero) %>
+<%= link_to "Delete", @hero, :method => 'delete' %>
